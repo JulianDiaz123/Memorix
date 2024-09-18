@@ -1,0 +1,20 @@
+.boton {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.boton:hover {
+  transform: scale(1.05);
+}
+
+.boton:active,
+.active {
+  transform: scale(1);
+  filter: brightness(1245);
+}
+.blocked {
+  pointer-events: none;
+}

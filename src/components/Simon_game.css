@@ -1,0 +1,83 @@
+.simon {
+  position: relative;
+  background-color: rgb(17, 17, 17);
+  border-radius: 20px;
+  height: 300px;
+  width: 300px;
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+}
+
+.btn-inicio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  transition: background-color 0.2s;
+  cursor: pointer;
+  color: white;
+}
+.btn-inicio:hover {
+  background-color: rgb(56, 56, 56);
+}
+.btn-inicio:active {
+  background-color: rgb(0, 0, 0);
+}
+.round {
+  border: 2px solid red;
+  border-radius: 10px;
+  background-color: #444;
+  width: 40%;
+  margin: 10px auto;
+}
+
+.won {
+  animation: rotate 0.5s ease-in-out;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.lost {
+  animation: twinkle 0.5s ease-in-out;
+}
+@keyframes twinkle {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: black;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: black;
+  }
+}
+.winner-message,
+.loser-message {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(128, 128, 128, 0.8);
+  width: 60%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 2px solid #f7f7f7;
+}
